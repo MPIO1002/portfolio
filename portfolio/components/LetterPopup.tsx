@@ -24,7 +24,8 @@ export default function LetterPopup({ isOpen, onClose }: LetterPopupProps) {
 
   return (
     <div 
-      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 backdrop-blur-sm"
+      style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
       onClick={onClose}
     >
       <div 
@@ -32,7 +33,11 @@ export default function LetterPopup({ isOpen, onClose }: LetterPopupProps) {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Letter Paper */}
-        <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg shadow-2xl p-8 sm:p-12 relative animate-[letterUnfold_0.6s_ease-out]">
+        <div className="rounded-lg shadow-2xl p-8 sm:p-12 relative animate-[letterUnfold_0.6s_ease-out]"
+             style={{ 
+               backgroundColor: '#fefce8',
+               backgroundImage: 'linear-gradient(to bottom right, #fffbeb, #fef9c3)'
+             }}>
           {/* Close Button */}
           <button
             onClick={onClose}
