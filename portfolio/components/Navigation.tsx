@@ -28,7 +28,7 @@ export default function Navigation() {
           {/* Logo */}
           <a href="#" className="flex items-center">
             <Image
-              src="/my-logo.jpg"
+              src="/my-logo.png"
               alt="Logo"
               width={60}
               height={60}

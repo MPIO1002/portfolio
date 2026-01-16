@@ -28,9 +28,7 @@ const projects: Project[] = [
             { label: "Document", href: "https://docs.google.com/document/d/1CkK7RCdVcNLNSzGxRXsU7pIAj9kL4BWa3x84nXhvT_8/edit?usp=sharing", icon: "doc" }
         ],
         images: [
-            { src: "/mhgh-1.png", alt: "MHGH Screenshot 1", orientation: "horizontal" },
-            { src: "/mhgh-2.png", alt: "MHGH Screenshot 2", orientation: "vertical" },
-            { src: "/mhgh-3.png", alt: "MHGH Screenshot 3", orientation: "horizontal" }
+            { src: "/mhgh-1.png", alt: "MHGH Screenshot 1", orientation: "horizontal" }
         ]
     },
     {
@@ -44,9 +42,7 @@ const projects: Project[] = [
             { label: "GitHub", href: "https://github.com/MPIO1002/store-management-fe", icon: "github" }
         ],
         images: [
-            { src: "/gs-1.png", alt: "Green Store Screenshot 1", orientation: "horizontal" },
-            { src: "/gs-2.png", alt: "Green Store Screenshot 2", orientation: "horizontal" },
-            { src: "/gs-3.png", alt: "Green Store Screenshot 3", orientation: "horizontal" }
+            { src: "/gs-1.png", alt: "Green Store Screenshot 1", orientation: "horizontal" }
         ]
     },
     {
@@ -61,9 +57,7 @@ const projects: Project[] = [
             { label: "Video Demo", href: "https://www.tiktok.com/@thichfrontend/video/7585484069299948821", icon: "video" }
         ],
         images: [
-            { src: "/ci-1.png", alt: "Cineme Screenshot 1", orientation: "horizontal" },
-            { src: "/ci-2.png", alt: "Cineme Screenshot 2", orientation: "horizontal" },
-            { src: "/ci-3.png", alt: "Cineme Screenshot 3", orientation: "horizontal" }
+            { src: "/ci-1.png", alt: "Cineme Screenshot 1", orientation: "horizontal" }
         ]
     }
 ];
