@@ -23,8 +23,8 @@ export default function AboutSection() {
     const [isLetterOpen, setIsLetterOpen] = useState(false);
     const [isFolderOpen, setIsFolderOpen] = useState(false);
     const [autoRotate, setAutoRotate] = useState(false);
-    const [leftIconPos, setLeftIconPos] = useState({ top: '20%', left: '5%' });
-    const [rightIconPos, setRightIconPos] = useState({ top: '70%', right: '5%' });
+    const [leftIconPos, setLeftIconPos] = useState({ top: '10%', left: '5%' });
+    const [rightIconPos, setRightIconPos] = useState({ top: '80%', right: '5%' });
 
     useEffect(() => {
         // Auto rotate animation
@@ -91,12 +91,13 @@ export default function AboutSection() {
                         }}
                     />
 
-                    <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-center mb-12 head-font relative z-10">About Me</h1>
+                    <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-center mb-12 head-font relative z-10">About Me</h1>
                     {/* Folder centered below heading */}
-                    <div className="flex justify-center mt-20 relative z-10">
+                    <div className="flex flex-col items-center mt-20 relative z-10">
                         <div onClick={handleFolderClick} className="cursor-pointer">
                             <Folder size={1.8} color="#1d4ed8" open={isFolderOpen} onOpenChange={setIsFolderOpen} />
                         </div>
+                        <p className="text-lg mt-12 font-bold animate-pulse">Click me!</p>
                     </div>
                 </div>
 
