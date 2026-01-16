@@ -1,8 +1,11 @@
+'use client';
+
 import Image from "next/image";
 import SplitText from "../components/SplitText";
 import RotatingText from '../components/RotatingText'
 import LogoLoop from '../components/LogoLoop';
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiDocker, SiVercel } from 'react-icons/si';
+import { useState } from 'react';
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -14,6 +17,8 @@ const techLogos = [
 ];
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <div className="overflow-x-hidden">
       {/* Navigation Bar */}
@@ -31,8 +36,8 @@ export default function Home() {
               />
             </a>
 
-            {/* Navigation Links */}
-            <div className="flex items-center gap-6 sm:gap-8 md:gap-10">
+            {/* Desktop Navigation Links */}
+            <div className="hidden md:flex items-center gap-6 sm:gap-8 md:gap-10">
               <a href="#about" className="text-base sm:text-lg font-medium hover:text-blue-700 transition-colors">
                 About me
               </a>
@@ -40,7 +45,40 @@ export default function Home() {
                 Projects
               </a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden flex flex-col gap-1.5 w-8 h-8 justify-center items-center"
+              aria-label="Toggle menu"
+            >
+              <span className={`w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-gray-800 transition-opacity duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`w-6 h-0.5 bg-gray-800 transition-transform duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200">
+              <div className="flex flex-col gap-4">
+                <a 
+                  href="#about" 
+                  className="text-lg font-medium hover:text-blue-700 transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  About me
+                </a>
+                <a 
+                  href="#projects" 
+                  className="text-lg font-medium hover:text-blue-700 transition-colors py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Projects
+                </a>
+              </div>
+            </div>
+          )}
         </div>
       </nav>
 
