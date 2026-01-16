@@ -51,6 +51,10 @@ body {
   font-optical-sizing: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -133,4 +137,36 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes slide-in-bottom {0% { transform: translateY(1000px); opacity: 0; } 100% { transform: translateY(0); opacity: 1;} }
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes letterUnfold {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(-90deg);
+    transform-origin: top center;
+  }
+  50% {
+    transform: scale(0.95) rotateX(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+.slide-in-bottom-normal { 
+    animation: slide-in-bottom-normal 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s 1 normal both; 
 }
