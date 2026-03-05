@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lexend_Deca, Great_Vibes } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 // @ts-ignore: Importing global CSS
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${lexendDeca.variable} ${greatVibes.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
