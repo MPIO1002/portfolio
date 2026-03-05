@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Lexend_Deca, Great_Vibes } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 // @ts-ignore: Importing global CSS
 import "./globals.css";
 
