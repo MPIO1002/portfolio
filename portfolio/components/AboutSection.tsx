@@ -117,7 +117,7 @@ export default function AboutSection() {
                         <p className="text-gray-700 font-medium mb-2">Sai Gon University</p>
                         <p className="text-gray-600 mb-2">Information and Technology</p>
                         <p className="text-gray-600 mb-1">2022 - 2027</p>
-                        <p className="text-blue-700 font-semibold">GPA: 3.05/4.0</p>
+                        <p className="text-blue-700 font-semibold">GPA: 3.06/4.0</p>
                     </div>
 
                     {/* Certificate */}
@@ -131,7 +131,7 @@ export default function AboutSection() {
                             <h3 className="text-2xl font-bold text-gray-800">Certificate</h3>
                         </div>
                         <p className="text-gray-700 font-medium mb-2">IELTS</p>
-                        <p className="text-blue-700 font-bold">7.0 Overall</p>
+                        <p className="text-blue-700 font-bold">7.5 Overall</p>
                     </div>
 
                     {/* Experience */}
