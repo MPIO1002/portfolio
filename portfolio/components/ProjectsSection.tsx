@@ -604,7 +604,7 @@ export default function ProjectsSection() {
                 <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-center mb-4 mt-4 head-font text-black">
                     Projects
                 </h1>
-                <p className="text-center text-neutral-600 text-base sm:text-lg mb-16 max-w-2xl mx-auto font-medium">
+                <p className="text-center text-neutral-600 text-base sm:text-lg mb-16 max-w-3xl mx-auto font-medium">
                     A selection of work I&apos;ve built — from freelance products to personal explorations.
                 </p>
 
